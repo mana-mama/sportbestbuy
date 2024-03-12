@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sportbestbuy - SBB อุปกรณ์กีฬาราคาส่ง</title>
+    <link rel="icon" type="image/x-icon" href="sbb-logo.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+    <header>
+        <a class="logo" href="index.html"><img src="webp pic/sbb-logo.webp" alt=""></a>
+
+        <nav class="navbar">
+            <!-- <a class="active" href="#home">หน้าหลัก</a> -->
+            <!-- <a href="#products">สินค้า</a> -->
+            <a href="about.html">เกี่ยวกับเรา</a>
+        </nav>
+
+        <!-- <div class="icons">
+            <a class="bars" id="menu-bars">&#9776</a>
+            <a class="search" id="search-icon">&#9906</a>
+        </div> -->
+    </header>
+
+    <section class="home" id="home">
+        <h1 class="heading">สินค้า sportbestbuy</h1>
+
+        <div class="products-list">
+            <label for="products">เลือกประเภทสินค้า</label>
+            <select name="products" id="products" onchange="getOption(value)">
+                <option value="0">สินค้าทั้งหมด</option>
+            </select>
+        </div>
+        <div class="box-container">
+            <div class="box" id="1">
+                <img loading="lazy" src="webp pic/frisbee_g.webp" alt="">
+                <h3 id="name">
+                    จานร่อน
+                </h3>
+                <div class="commerce">
+                    <a href="#" id="shp">
+                        <img loading="lazy" class="icon" src="webp pic/shopee-icon.webp" alt="">
+                    </a>
+                    <a href="#" id="lzd">
+                        <img loading="lazy" class="icon" src="webp pic/lazada-icon.webp" alt="">
+                    </a>
+                </div>
+            </div>                 
+        </div>
+    </section>
+
+    <div class="top-button">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">&#8679</button>
+    </div>
+
+    <footer>
+        <div class="box-container">
+            <div class="box">
+                <h3>ช่องทางติดต่อ</h3>
+                <a href="#">0955824937</a>
+                <a href="#">sportbestbuy@gmail.com</a>
+            </div>
+
+            <div class="box">
+                <h3>บัญชีโซเชียลมีเดีย</h3>
+                <a href="#">080-000-0000</a>
+                <a href="#">000@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="credit">
+            copyright @ 2024 by <span>sportbestbuy</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+</body>
+</html>
+
+
+<script>
+    var url = "products-list.xlsx";
+    var oReq = new XMLHttpRequest();
+    oReq.open("GET", url, true);
+    oReq.responseType = "arraybuffer";
+    
+    oReq.onload = function(e) {
+        var arraybuffer = oReq.response;
+    
+        var data = new Uint8Array(arraybuffer);
+        var arr = new Array();
+        for(var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+        var bstr = arr.join("");
+    
+        var workbook = XLSX.read(bstr, {type:"binary"});
+
+        for (i = 0; i < workbook.SheetNames.length; i++) {
+            var sheet_name = workbook.SheetNames[i];
+            var worksheet = workbook.Sheets[sheet_name];
+            var data = XLSX.utils.sheet_to_json(worksheet,{raw:true});
+            
+            organizingJSON(data, i);
+        }
+
+        deleteFirstBox();
+    }
+    oReq.send();
+</script>
