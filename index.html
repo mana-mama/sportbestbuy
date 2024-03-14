@@ -3,77 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sportbestbuy - SBB อุปกรณ์กีฬาราคาส่ง</title>
+    <title>sportbestbuy - SBB อุปกรณ์กีฬาราคาส่ง - หน้าหลัก</title>
     <link rel="icon" type="image/x-icon" href="sbb-logo.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="page-container">
-    <header>
-        <a class="logo" href="index.html"><img src="webp pic/sbb-logo.webp" alt=""></a>
+        <header>
+            <a class="logo" href="index.html"><img src="webp pic/sbb-logo.webp" alt=""></a>
 
-        <nav class="navbar">
-            <!-- <a class="active" href="#home">หน้าหลัก</a> -->
-            <!-- <a href="#products">สินค้า</a> -->
-            <a href="about.html">เกี่ยวกับเรา</a>
-        </nav>
+            <nav class="navbar">
+                <a class="active" href="index.html">หน้าหลัก</a>
+                <a href="products.html">สินค้า</a>
+                <a href="about.html">เกี่ยวกับเรา</a>
+                <a href="contacts.html">ติดต่อเรา</a>
+            </nav>
 
-        <!-- <div class="icons">
-            <a class="bars" id="menu-bars">&#9776</a>
-            <a class="search" id="search-icon">&#9906</a>
-        </div> -->
-    </header>
+            <div class="icons">
+                <a class="bars" id="menu-bars">&#9776</a>
+            </div>
+        </header>
 
-    <section class="home" id="home">
-        <h1 class="heading">สินค้า sportbestbuy</h1>
+        <div class="margin-top"></div>
 
-        <div class="products-list">
-            <label for="products">เลือกประเภทสินค้า</label>
-            <select name="products" id="products" onchange="getOption(value)">
-                <option value="0">สินค้าทั้งหมด</option>
-            </select>
-        </div>
-        <div class="box-container">
-            <div class="box" id="1">
-                <img loading="lazy" src="webp pic/frisbee_g.webp" alt="">
-                <h3 id="name">
-                    จานร่อน
-                </h3>
-                <div class="commerce">
-                    <a href="#" id="shp">
-                        <img loading="lazy" class="icon" src="webp pic/shopee-icon.webp" alt="">
-                    </a>
-                    <a href="#" id="lzd">
-                        <img loading="lazy" class="icon" src="webp pic/lazada-icon.webp" alt="">
-                    </a>
+        <section class="about" id="about">
+            <h2 class="sub-heading">ยินดีต้อนรับสู่ <span>SPORT BEST BUY</span></h2>
+            <div class="sub-heading" style="display: flex;">
+                <p>
+                    ร้านค้าที่คุณไว้วางใจได้ในด้านอุปกรณ์กีฬาและการออกกำลังกายมานานกว่า 20 ปี
+                </p> 
+            </div>
+            <img class="hero" src="webp pic/41efbec47301beb4b606d294fc29743f.webp" alt="" class="shop-now">
+            <h2 class="sub-heading">ผลิตภัณฑ์ของเราตอบสนองต่อความต้องการ</h2>
+            <p class="saak" style="text-align: center;">
+                • Home Exercise สามารถออกกำลังกายได้ทุกที่ทุกเวลา<br>
+                • Sport Agility เสริมสร้างสุขภาพและความสัมพันธ์ของผู้ร่วมกิจกรรม <br>
+                • Music & Recreation Sport ส่งเสริมการออกกำลังการแบบง่ายเพื่อให้ทุกคนเข้าถึงการออกกำลังกาย
+            </p>
+            </p>
+            <div class="row">
+                <div class="content">
+                    <h3>อุปกรณ์กีฬา คุณภาพดี ราคาส่ง</h3>
+                    <p style="text-align: center;">
+                        - คุณภาพและราคาที่เอื้อมถึง <br>
+                        - การออกแบบที่เน้นลูกค้า <br>
+                        - ความหลากหลายและการเลือกสรร <br>
+                        - สต็อกพร้อมและการจัดส่งที่รวดเร็ว <br>
+                        - ช่องทางการขายที่หลากหลาย 
+                    </p>
                 </div>
-            </div>                 
-        </div>
-    </section>
+                <div class="grid-img">
+                    <img src="webp pic/4effba1ab0c766aef14eb5b71d35be6c.webp" alt="" class="left">
+                    <img src="webp pic/Untitled-1.webp" alt="" class="right">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="top-button">
-        <button onclick="topFunction()" id="myBtn" title="Go to top">&#8679</button>
+        <section class="home" id="home">
+            <h1 class="heading">สินค้า sportbestbuy</h1>
+
+            <div class="products-list">
+                <label for="products">เลือกประเภทสินค้า</label>
+                <select name="products" id="products" onchange="getOption(value)">
+                    <option value="0">สินค้าทั้งหมด</option>
+                </select>
+            </div>
+            <div class="box-container">
+                <div class="box" id="1">
+                    <img loading="lazy" src="webp pic/frisbee_g.webp" alt="">
+                    <h3 id="name">
+                        จานร่อน
+                    </h3>
+                    <div class="commerce">
+                        <a href="#" id="shp">
+                            <img loading="lazy" class="icon" src="webp pic/shopee-icon.webp" alt="">
+                        </a>
+                        <a href="#" id="lzd">
+                            <img loading="lazy" class="icon" src="webp pic/lazada-icon.webp" alt="">
+                        </a>
+                    </div>
+                </div>                 
+            </div>
+        </section>
+
+        <div class="top-button">
+            <button onclick="topFunction()" id="myBtn" title="Go to top">&#8679</button>
+        </div>
+
+        <footer>
+            <div class="box-container">
+                <div class="box">
+                    <h3>ช่องทางติดต่อ</h3>
+                    <a href="#">0955824937</a>
+                    <a href="#">sportbestbuy@gmail.com</a>
+                </div>
+
+                <div class="box">
+                    <h3>บัญชีโซเชียลมีเดีย</h3>
+                    <a href="#">080-000-0000</a>
+                    <a href="#">000@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="credit">
+                copyright @ 2024 by <span>sportbestbuy</span>
+            </div>
+        </footer>
     </div>
-
-    <footer>
-        <div class="box-container">
-            <div class="box">
-                <h3>ช่องทางติดต่อ</h3>
-                <a href="#">0955824937</a>
-                <a href="#">sportbestbuy@gmail.com</a>
-            </div>
-
-            <div class="box">
-                <h3>บัญชีโซเชียลมีเดีย</h3>
-                <a href="#">080-000-0000</a>
-                <a href="#">000@gmail.com</a>
-            </div>
-        </div>
-
-        <div class="credit">
-            copyright @ 2024 by <span>sportbestbuy</span>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

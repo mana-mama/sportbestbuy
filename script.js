@@ -1,10 +1,10 @@
-// let menu = document.querySelector("#menu-bars")
-// let navbar = document.querySelector(".navbar")
+let menu = document.querySelector("#menu-bars")
+let navbar = document.querySelector(".navbar")
 
-// menu.onclick = () => {
-//     menu.classList.toggle("active");
-//     navbar.classList.toggle("active");
-// }
+menu.onclick = () => {
+    menu.classList.toggle("active");
+    navbar.classList.toggle("active");
+}
 
 let option_box = document.querySelector("select");
 let options_list = document.querySelector("option");
@@ -98,14 +98,15 @@ function deleteFirstBox() {
 
 onscroll = () => {
     if (scrollY != 0) {
-        header_bar.style.opacity = 0.7;
+        // header_bar.style.opacity = 0.7;
         top_button.style.display = "block"
     } else {
-        header_bar.style.opacity = 1;
+        // header_bar.style.opacity = 1;
         top_button.style.display = "none"
     }
+    navbar.classList.remove("active");
 }
 
 function topFunction() {
     window.scrollTo({top: 0, behavior: 'smooth'});
-  }
+}
