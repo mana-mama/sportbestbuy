@@ -105,6 +105,8 @@ onscroll = () => {
         top_button.style.display = "none"
     }
     navbar.classList.remove("active");
+    menu.classList.remove("active");
+    navbar.classList.remove("active");
 }
 
 function topFunction() {

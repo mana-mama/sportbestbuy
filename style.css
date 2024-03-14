@@ -41,7 +41,6 @@ header {
     z-index: 10;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     padding-inline: 15%;
-    height: 15rem;
 }
 
 header a.logo img {
@@ -82,22 +81,27 @@ header div.icons {
 
 header div.icons a {
     cursor: pointer;
-    margin-left: .5rem;
-    height: 5rem;
-    line-height: 5.2rem;
-    width: 5rem;
+    height: 10rem;
+    line-height: 10.5rem;
+    width: 10rem;
     text-align: center;
-    font-size: 3rem;
+    font-size: 6rem;
     color: var(--color_1);
     border-radius: 50%;
-    background-color: var(--color_4)
+    background-color: var(--color_4);
+
+    transition: all 0.3s;
 }
 
-header div.icons a:hover,
+header div.icons a:hover {
+    color: var(--color_4);
+    background-color:var(--color_2);
+}
+
 header div.icons a.active {
     color: var(--color_4);
     background-color:var(--color_3);
-    transform: rotate(360deg);
+    transform: rotate(90deg);
 }
 
 header div.icons #menu-bars {
@@ -118,6 +122,7 @@ header div.icons #menu-bars {
 .home .products-list {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 2rem;
 }
 
@@ -187,7 +192,6 @@ img.icon:hover {
     margin-top: 1rem;
 }
 
-
 #myBtn {
     display: none;
     position: fixed;
@@ -195,20 +199,20 @@ img.icon:hover {
     right: 30px;
     z-index: 99;
     border: none;
-    background-color: var(--color_2);
+    background-color: var(--color_1);
     color: var(--color_4);
     cursor: pointer;
     border-radius: 1.5rem;
-    font-size: 3rem;
-    min-width: 5rem;
-    min-height: 5rem;
+    font-size: 4rem;
+    width: 5rem;
+    height: 5rem;
     opacity: 0.8;
-  }
+}
   
-  #myBtn:hover {
+#myBtn:hover {
     background-color: var(--color_4);
     color: var(--color_2);
-  }
+}
 
 
 footer {
@@ -387,7 +391,6 @@ span {
 
 
 
-
 /* media query */
 
 @media (max-width:1024px) {
@@ -402,7 +405,7 @@ span {
     }
 
     header {
-        padding: 1rem 2rem;
+        height: 20rem;
     }
 
     .home .box-container {
@@ -450,9 +453,9 @@ span {
         display: block;
         text-align: center;
         position: fixed;
-        top: 15rem; right: 0;
-        width: 25%;
-        height: 40rem;
+        top: 20rem; right: 0;
+        width: 50%;
+        height: 84.7%;
         background: white;
         border-top: .5rem solid var(--color_4);
         border-bottom: .5rem solid var(--color_4);
@@ -468,23 +471,71 @@ span {
         display: block;
         padding: 1.5rem;
         margin: 1rem;
-        font-size: 2rem;
+        font-size: 5rem;
         border-top: .2rem solid var(--color_3);
         border-bottom: .2rem solid var(--color_3);
+    }
+
+    .home .box-container {
+        grid-template-columns: auto auto;
     }
 
     .box-container .box img {
         width: 100%;
     }
 
+    .box .commerce {
+        bottom: -2.5rem;
+    }
+
     .box-container .box img.icon {
-        width: 4rem;
+        width: 5.5rem;
     }
 }
 
 @media (max-width:640px) {
     :root {
         font-size: 30%;
+    }
+    
+    header a.logo img {
+        width: 15rem;
+    }
+
+    h1 {
+        font-size: 5.5rem !important;
+    }
+
+    h2 {
+        font-size: 5rem !important;
+    }
+
+    h3 {
+        font-size: 4.5rem !important;
+    }
+
+    p {
+        font-size: 4rem !important;
+    }
+
+    footer a,
+    footer .credit {
+        font-size: 3rem !important;
+    }
+    
+    .home .products-list label {
+        font-size: 3.5rem;
+    }
+    
+    .home .products-list select {
+        font-size: 3.5rem;
+    }
+
+    #myBtn {
+
+        font-size: 8rem;
+        width: 10rem;
+        height: 10rem;
     }
 }
 
