@@ -43,15 +43,20 @@ header {
     padding-inline: 15%;
 }
 
+header a.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
 header a.logo img {
-    padding-top: 0.2rem;
     width: 10rem;
-    border-radius: 1.5rem;
 }
 
 header a.logo:hover {
     background-color: var(--color_2);
-    border-radius: 1.5rem;
+    border-radius: 4rem;
     -webkit-filter: invert(1);
     filter: invert(1);
 }
@@ -195,17 +200,21 @@ img.icon:hover {
 #myBtn {
     display: none;
     position: fixed;
+    border: none;
+    cursor: pointer;
+
     bottom: 20px;
     right: 30px;
     z-index: 99;
-    border: none;
+
     background-color: var(--color_1);
     color: var(--color_4);
-    cursor: pointer;
+
     border-radius: 1.5rem;
     font-size: 4rem;
     width: 5rem;
     height: 5rem;
+    line-height: 5rem;
     opacity: 0.8;
 }
   
@@ -455,7 +464,7 @@ span {
         position: fixed;
         top: 20rem; right: 0;
         width: 50%;
-        height: 84.7%;
+        height: 100%;
         background: white;
         border-top: .5rem solid var(--color_4);
         border-bottom: .5rem solid var(--color_4);
@@ -532,10 +541,10 @@ span {
     }
 
     #myBtn {
-
         font-size: 8rem;
         width: 10rem;
         height: 10rem;
+        line-height: 10rem;
     }
 }
 
